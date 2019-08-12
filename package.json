@@ -1,0 +1,14 @@
+{
+  "name": "ts-starter",
+  "version": "1.0.0",
+  "description": "TypeScript starter project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Hammond",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}
