@@ -1,6 +1,12 @@
-import printMe from '../common/print';
+import express, {Express} from "express";
 
-console.log("I am server SMOrc");
-console.log("I am server SMOrc");
+const app: Express = express();
+const PORT = 9000;
 
-printMe();
+app.get("/", (req, res) => {
+    res.send("Hello Express!");
+});
+
+app.listen(PORT, () =>{
+    console.log(`Server listening on port ${PORT}.`)
+});
