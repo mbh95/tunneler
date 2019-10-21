@@ -1,7 +1,7 @@
 # Tunneler
 
 ## Development
-Run the following two commands to start fullstack dev environment:
+Run the following two commands to start full stack dev environment:
 
 1.  Start the server in watch mode:
 ```sh
