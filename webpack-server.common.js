@@ -1,10 +1,10 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  target: "node",
   entry: {
-    app: './src/index.ts',
+    server: './src/server/main.ts',
   },
   module: {
     rules: [
@@ -20,15 +20,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-                            template: 'src/index.html'
-                          }),
   ],
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
-  optimization: {
-    runtimeChunk: 'single'
-  }
 };

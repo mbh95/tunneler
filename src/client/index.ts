@@ -1,6 +1,6 @@
-import printMe from './print';
+import printMe from '../common/print';
 
-function component() {
+function component(): HTMLDivElement {
     const element = document.createElement('div');
     const btn = document.createElement('button');
 
