@@ -1,16 +1,11 @@
 # Tunneler
 
 ## Development
-Run the following three commands to start fullstack dev environment:
+Run the following two commands to start fullstack dev environment:
 
-1.  Build the server in watch mode:
+1.  Start the server in watch mode:
 ```sh
-$ npm run server:build-watch
-```
-
-2.  Run the server in watch mode:
-```sh
-$ npm run server:start-watch
+$ npm run server:watch
 ```
 
 3.  Start webpack dev server for client:
