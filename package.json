@@ -7,7 +7,7 @@
     "client:watch": "webpack-dev-server --open --config webpack-client.dev.js",
     "server:build": "webpack --config webpack-server.prod.js",
     "server:watch": "webpack --config webpack-server.dev.js --watch",
-    "server:start": "node dist/server.js"
+    "server:start": "node dist/server/server.js"
   },
   "author": "Ashok Sankaran and Matt Hammond",
   "license": "MIT",
