@@ -1,14 +1,19 @@
-import printMe from '../common/print';
+const ws: WebSocket = new WebSocket("ws://localhost:8999/");
 
-function component(): HTMLDivElement {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
+ws.onopen = function (event) {
+    ws.send("Here's some text that the server is urgently awaiting!");
+};
 
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
+ws.onmessage = function(e) {
+    console.log(e);
+};
 
-    element.appendChild(btn);
-    return element;
-  }
+const ws2: WebSocket = new WebSocket("ws://localhost:8999/");
 
-  document.body.appendChild(component());
+ws2.onopen = function (event) {
+    ws2.send("I am another client!");
+};
+
+ws2.onmessage = function(e) {
+    console.log(e);
+};
